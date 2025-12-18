@@ -1,0 +1,175 @@
+/* PAGE ko scrollable rakho */
+.dashboard-container {
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.dash-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #1f2937;
+  padding: 15px 30px;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* left-right layout */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Navbar title */
+.dash-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-right: 30px;
+}
+
+/* Navbar links container */
+.dash-links {
+  list-style: none;
+  display: flex;        /* horizontal line */
+  gap: 20px;            /* spacing between links */
+  margin: 0;
+  padding: 0;
+  align-items: center;  /* vertical alignment */
+}
+
+/* Navbar individual items */
+.dash-links li {
+  display: inline-block;
+}
+
+/* Links & Profile button style */
+.dash-links a,
+.profile-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.dash-links a:hover,
+.profile-link:hover {
+  background: #3b82f6; /* blue hover */
+  color:black;
+}
+
+/* Profile button look like link */
+.profile-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Main content */
+.main-content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Table wrapper */
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #2563eb; /* blue header */
+  color: #fff;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+input, select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #ef4444; /* red hover for delete */
+  color: #fff;
+}
+
+/* Profile section spacing */
+.profile-section {
+  margin-top: 60px;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  scroll-margin-top: 120px; /* sticky navbar offset */
+  transition: transform 0.3s ease;
+}
+
+/* Profile inputs inside Profile component */
+.profile-section input,
+.profile-section select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+}
+
+.profile-section button {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+.profile-section button:hover {
+  background: #1e40af;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dash-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .profile-section {
+    padding: 30px 20px;
+  }
+}
